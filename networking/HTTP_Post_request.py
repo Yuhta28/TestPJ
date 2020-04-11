@@ -1,4 +1,4 @@
-from StringIO import StringIO
+from io import StringIO
 import requests
 
 payload = {'key1':'value1', 'key2':'value2'}
