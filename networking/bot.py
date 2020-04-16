@@ -13,5 +13,5 @@ while 1:
     text = irc.get_text()
     print(text)
 
-    if "PRIVMSG" in text and channel in text and "hello" in text:
+    if "PRIVMSG " in text and channel in text and "hello" in text:
         irc.send(channel, "HEllo!")
