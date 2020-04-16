@@ -13,5 +13,7 @@ while 1:
     text = irc.get_text()
     print(text)
 
+    text = text.decode()
+    channel = channel.decode()
     if "PRIVMSG " in text and channel in text and "hello" in text:
         irc.send(channel, "HEllo!")
