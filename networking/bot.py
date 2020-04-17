@@ -10,10 +10,8 @@ irc = IRC()
 irc.connect(server, channel, botnick)
 
 while 1:
-    text = irc.get_text()
+    text = irc.get_text().decode("utf-8")
     print(text)
 
-    text = text.decode()
-    channel = channel.decode()
     if "PRIVMSG " in text and channel in text and "hello" in text:
         irc.send(channel, "HEllo!")

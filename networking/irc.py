@@ -23,7 +23,7 @@ class IRC:
         self._send_raw("JOIN " + channel + "\n")  # join the channel
 
     def get_text(self):
-        text=self.irc.recv(2040)    # receive the text
+        text=b'self.irc.recv(2040)'    # receive the text
 
         if text.find(b'PING') != -1:
             self._send_raw('PONG' + text.split()[1])
